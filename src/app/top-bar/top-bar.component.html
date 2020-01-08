@@ -1,0 +1,22 @@
+<a [routerLink]="['/']">
+ 
+  <h1> &nbsp;&nbsp;&nbsp; FUNCING</h1>
+</a>
+<a [routerLink]="['/shop']">
+  <p class="pmenu">Shop</p>
+</a>
+<a *ngIf="authService.isLoggedIn() && authService.isAdmin()" [routerLink]="['/admin']" >
+  <p class="pmenu">Admin</p>
+</a>
+
+<p class="headbutt ">
+  <a [routerLink]="['/cart']" class="button fancy-button headbutt">
+    <i class="material-icons">shopping_cart</i>Checkout
+  </a>
+  <a *ngIf="!authService.isLoggedIn()" [routerLink]="['/account']" class="button fancy-button headbutt">
+    <i class="material-icons">perm_identity</i>Login
+  </a> 
+  <a *ngIf="authService.isLoggedIn()" [routerLink]="['/']" (click)="logout()" class="button fancy-button headbutt">
+  <i class="material-icons">perm_identity</i>Logout
+  </a>
+</p>

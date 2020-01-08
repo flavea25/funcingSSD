@@ -1,0 +1,13 @@
+.pmenu{
+  font-size: 1.3em;
+  color: white;
+  font-weight: lighter;
+  text-align: center;
+  text-decoration: none;
+}
+
+.headbutt{
+  float:right;
+  text-decoration: none;
+  margin: 0.1em 0.25em;
+}

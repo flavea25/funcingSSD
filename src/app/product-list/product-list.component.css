@@ -1,0 +1,19 @@
+img{
+  width: 220px;
+  height: 220px;
+}
+
+.wrapper {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 5em;
+}
+
+.shopp{
+  font-size: 1.5em; 
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}

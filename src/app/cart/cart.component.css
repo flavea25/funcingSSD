@@ -1,0 +1,30 @@
+.addinput{
+  width:300px;
+  font-size:1em;
+}
+.nameinput{
+  width:300px;
+  font-size:1em;
+}
+label{
+  font-size:1em;
+}
+
+.darker{
+  background-color:#b3b3b3;
+  color:black;
+}
+
+h2{
+  font-size:1.75em;
+}
+
+.fav{
+  color:white;
+}
+
+.req{
+  color:red;
+}
+
+.pointer {cursor: pointer;}

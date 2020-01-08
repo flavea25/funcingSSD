@@ -1,0 +1,15 @@
+<br><br>
+<div class="wrapper" *ngFor="let e of equips">
+  <div class="card" *ngIf="e.id==path">
+    <img src={{e.picture}} />
+  </div>
+  <div class="card" *ngIf="e.id==path">
+    <br><br><br>
+    <p class="detailsp">
+      {{e.name}}
+    </p>
+    <b>{{e.price | currency}}</b>
+    <br><br><br>
+    <button (click)="addToCart(e)"><i class="material-icons details">add_shopping_cart</i>&nbsp;&nbsp; Add to Cart</button>
+  </div>
+</div>

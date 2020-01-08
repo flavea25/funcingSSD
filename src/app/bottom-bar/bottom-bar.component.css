@@ -1,0 +1,17 @@
+footer {
+  padding: 0.05em 0.05em;
+  margin: 0em;
+  margin-top:1em;
+  color: black;
+  background-color: #b195b8;
+  text-align: center;
+  font-size: 1.1em;
+  text-decoration: none; 
+  bottom:0.1em;
+  align-items:center;
+}
+
+.pos{
+ position: relative;
+ bottom: -5px;
+}

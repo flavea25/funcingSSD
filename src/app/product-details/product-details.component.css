@@ -1,0 +1,25 @@
+.details{
+  color:white;
+}
+
+.detailsp{
+  font-size:2em;
+}
+
+img{
+  width:500px;
+  height: 500px;
+}
+
+.wrapper {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4em;
+}
+
+.detailsi {
+  font-size: 0.4em;
+  padding: 0px;
+  margin-bottom: 0px;
+  border: none;
+}

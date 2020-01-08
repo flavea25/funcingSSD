@@ -1,0 +1,29 @@
+<br><br>
+<!--<div class="form-group">
+    <label for="selectCategory">Filter by Category</label>
+    <select class="form-control" id="selectCategory" [ngModel]="selectedCategory" (ngModelChange)="onChange($event)">
+      <option [ngValue]="null">Show All</option>
+      <option [ngValue]="category" *ngFor="let category of categories | async">{{category.name}}</option>
+    </select>
+    
+  </div>
+<br>
+
+{{count}}-->
+
+<div class="wrapper">
+	<div class="card" *ngFor="let e of equips">
+		<div class="card-body">
+      <a [routerLink]="['/products',e.id]"><img src={{e.picture}} /></a>
+      <br>
+			<p class="card-title shopp"><a [routerLink]="['/products',e.id]">
+          <b>{{ e.name }}</b>
+        </a></p>
+      {{e.price | currency}}
+      <br><br>
+      <a [routerLink]="['/products',e.id]"><button class="button">Buy</button></a>
+		</div>
+	</div>
+</div>
+
+<br><br><br><br>

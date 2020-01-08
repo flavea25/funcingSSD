@@ -1,0 +1,28 @@
+<br><br>
+
+<div *ngIf="!(authService.user | async)" class="logincenter">
+  <p>
+   Your Account
+  </p>
+  <input type="text" [(ngModel)]="email" placeholder="email">
+  <br>
+  <input type="password" [(ngModel)]="password" placeholder="password">
+  <br>
+  <button (click)="login()" [disabled]="!email || !password">
+    Login
+  </button>
+  &nbsp; &nbsp;
+  <button (click)="signup()" [disabled]="!email || !password">
+    Signup
+  </button>
+  <br><br>
+  <button type="buton" class="fb btn btn-block" (click)="signInWithFacebook()">
+    <i class="fa fa-facebook" aria-hidden="true"></i> 
+    Login with Facebook
+  </button>
+</div>
+
+<button *ngIf="(authService.user | async)" [routerLink]="['/']" (click)="logout()">Logout
+</button>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

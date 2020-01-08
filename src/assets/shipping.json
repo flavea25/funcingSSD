@@ -1,0 +1,12 @@
+[
+  {
+    "type": "Premium",
+    "description": "Comes in up to 2 working days",
+    "price": 9.99
+  },
+  {
+    "type": "Regular",
+    "description": "Comes in up to 5 working days\n FREE on orders over $100",
+    "price": 3.99
+  }
+]

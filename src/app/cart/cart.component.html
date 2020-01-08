@@ -1,0 +1,61 @@
+<br><br>
+<h1 *ngIf="total<=0">Your Shopping Cart is Empty!</h1>
+
+<h1 *ngIf="total>0">Cart</h1>
+
+<div class="cart-item" *ngFor="let i of itemsz">
+  <span>{{ i.name }}</span>
+  <span>{{ i.price | currency }}</span>
+</div>
+<div class="cart-item darker" *ngIf="total>0">
+  <span>TOTAL</span>
+  <span>{{total | currency}}</span>
+</div>
+
+
+<div *ngIf="total>0">
+  <br>
+  <label for="shipping">
+      Shipping<i class="req">*</i>
+  </label>
+  <div class="cart-item">
+  <form action="addSh()">
+    &nbsp;&nbsp;
+    <input class="form-check-input" type="radio" checked="checked" name="shipping" value=9.99> Regular <!--[(ngModel)]="regular" (change)="onItemChange($event)"-->
+    <i class="material-icons pointer" title='5 working days'>info</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="shipping" value=19.99> Premium
+    <i class="material-icons pointer" title='1-2 working days'>info</i>
+    <br>
+    $9.99&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$19.99
+  </form>
+  </div>
+<!--</div>
+<div class="cart-item darker" *ngIf="totall>0">
+  <span>TOTAL</span>
+  <span>{{totall | currency}}</span>-->
+</div>
+
+
+<br><br>
+<div *ngIf="total>0">
+<h2>Submit Order</h2>
+<br>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+  <div>
+    <label for="name">
+      Name<i class="req">*</i>
+    </label>
+    <input class="nameinput" id="name" type="text" formControlName="name" [(ngModel)]="name">
+  </div>
+  <div>
+    <label for="address">
+      Address<i class="req">*</i>
+    </label>
+    <input class="addinput" id="address" type="text" formControlName="address" [(ngModel)]="address">
+  </div>
+  <br>
+  <button class="button fav" type="submit" [disabled]="!name || !address || !(authService.user | async)"><i class="material-icons fav">play_for_work</i> &nbsp;&nbsp;Purchase</button>
+</form>
+<p class="req" *ngIf="!(authService.user | async)">*log in in order to purchase</p>
+</div>
+<br><br>

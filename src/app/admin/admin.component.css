@@ -1,0 +1,17 @@
+.del{
+  color: red;
+}
+.edit{
+  color: orange;
+}
+
+.inputfile{
+  background-color:white;
+  border:0;
+}
+
+.select{
+  font-size: 1.2em;
+  border: rounded;
+  border-color: #BDBDBD;
+}

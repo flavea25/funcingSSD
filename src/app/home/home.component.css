@@ -1,0 +1,51 @@
+.homepic1{
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/funcing-ssd.appspot.com/o/1.jpg?alt=media&token=2c2acebc-68b6-450a-95d8-007bf8d62b50);
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 45em;
+}
+
+.homepic3{
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/funcing-ssd.appspot.com/o/3.jpg?alt=media&token=a9899eda-7484-4fea-a06e-3c141b98c3f8);
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 45em;
+}
+
+/*
+2 fier si aur
+https://firebasestorage.googleapis.com/v0/b/funcing-ssd.appspot.com/o/2.jpg?alt=media&token=e2fa0f50-8082-465e-8c67-9c8af9fc0ae9
+*/
+
+
+.central{
+  background-color: #faf0fc;
+  opacity: 0.8;
+  text-align:center;
+  width:100%;
+  position:relative;
+  padding-top: 0.001em;
+  padding-bottom: 0.01em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.htitle{
+  font-size: 2.2em;
+  background-color: #faf0fc;
+  opacity: 0.8;
+  text-align:left;
+}
+
+.pcontent{
+  text-align:left;
+  font-size: 1.2;
+  float:center;
+  width:80%;
+}

@@ -1,0 +1,48 @@
+<br><br>
+<div align="left">
+  Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input [(ngModel)]="name"><br>
+  Category:&nbsp;&nbsp; <select class="form-control select" id="selectCategory" [ngModel]="selectedCategory" (ngModelChange)="onChange($event)">
+      <option [ngValue]="null">Select Category</option>
+      <option [ngValue]="category" *ngFor="let category of categories | async">{{category.name}}</option>
+    </select><br><br>
+  Price:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="number" [(ngModel)]="price"><br>
+  Picture: 
+  <input class="inputfile" type="file" [(ngModel)]="picture" (change)="upload($event)" accept=".png,.jpg" />
+  <br><br>
+  {{PictureURL}}
+  <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button" (click)="createNew(name,price,category,picture)">ADD</a>
+  </div>
+</div>
+
+<!-- 
+<p>Select a car:</p>
+
+<select [(ngModel)]="categorie">
+<option ng-repeat="x in category" value="{{x.name}}">{{x.name}}</option>
+</select> -->
+
+<br><br><br>
+<table>
+  <thead>
+    <th>Category&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th>Name&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th>Price&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th>PictureURL&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let e of equips">
+      <td>{{e.category}}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td>{{e.name}}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td>{{e.price | currency}}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td><a href={{e.picture}}>HERE!!</a></td>
+      <td>
+          <a (click)="update(e.id)"><i class="edit material-icons">edit</i></a>&nbsp;&nbsp;
+      </td>
+      <td>
+          <a (click)="delete(e.id)"><i class="del material-icons">delete_forever</i></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br><br>
