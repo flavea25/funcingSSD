@@ -25,7 +25,8 @@ export class CartComponent implements OnInit {
 
   onSubmit(customerData) {
     // Process checkout data here
-    window.alert('Check your email addres!');
+    window.alert('Your order has been placed!');
+    this.authService.sendEmail();
 
     this.itemsz = this.cartService.clearCart();
     this.checkoutForm.reset();
@@ -41,4 +42,6 @@ export class CartComponent implements OnInit {
     this.sh=event.target.value.valueOf();
     this.totall=this.total.valueOf()+this.sh.valueOf();
 }
+
+
 }

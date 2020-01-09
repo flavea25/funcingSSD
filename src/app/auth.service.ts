@@ -5,12 +5,14 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
 
+import { AngularFireFunctions } from '@angular/fire/functions';
+
 @Injectable()
 export class AuthService {
   private user: Observable<firebase.User>;
   private userDetails: firebase.User = null;
 
-	constructor(private firebaseAuth: AngularFireAuth, private router: Router) { 
+	constructor(private firebaseAuth: AngularFireAuth, private router: Router,private fun: AngularFireFunctions) { 
       this.user = firebaseAuth.authState;
 
       this.user.subscribe(
@@ -76,4 +78,10 @@ export class AuthService {
       return true;
     }
   }
+
+sendEmail() {
+    const callable = this.fun.httpsCallable('genericEmail');
+    callable({ text: "Hello!\n\nYour order has been confirmed!\nIt's been a pleasure working with you!\n\nThank you!\nAlexandra & Flavia\n", subject: 'Order Confirmation'}).subscribe();
+  }
+
 }

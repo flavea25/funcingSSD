@@ -16,6 +16,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { environment } from '../environments/environment';
 import { AuthService } from './auth.service';
+import { AngularFireFunctionsModule } from '@angular/fire/functions';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -44,6 +45,7 @@ import { EquipmentService } from './equipment.service';
     AngularFireDatabaseModule,
     AngularFireStorageModule,
     FlexLayoutModule,
+    AngularFireFunctionsModule,
 
     RouterModule.forRoot([
       { path: '', component: HomeComponent },

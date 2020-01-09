@@ -1,12 +1,13 @@
 <br><br>
 
-<div *ngIf="!(authService.user | async)" class="logincenter">
+<div *ngIf="!(authService.user | async)">
   <p>
    Your Account
   </p>
-  <input type="text" [(ngModel)]="email" placeholder="email">
+  
+  <input class="longin" type="text" [(ngModel)]="email" placeholder="email">
   <br>
-  <input type="password" [(ngModel)]="password" placeholder="password">
+  <input class="longin2" type="password" [(ngModel)]="password" placeholder="password">
   <br>
   <button (click)="login()" [disabled]="!email || !password">
     Login
