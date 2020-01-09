@@ -13,9 +13,8 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
+  float:center;
+  text-align:center;
 }
 
 router-outlet + *  {
